@@ -20,7 +20,7 @@ namespace GUI
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new frmAdmin());
+            Application.Run(new Form1());
         }
     }
 }

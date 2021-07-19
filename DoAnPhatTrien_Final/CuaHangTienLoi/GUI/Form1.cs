@@ -16,9 +16,34 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+        private Form isActive(Type ftype) //check if the form is show or not.
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == ftype)
+                    return f;
+            }
+            return null;
+        }
+       
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = isActive(typeof(frmHangHoa)); //check form đăng nhập có show hay không.
+            if (form == null) // nếu formdangnhap ko show
+            {
+                frmHangHoa f = new frmHangHoa(); //tạo mới form đăng nhập và show nó.
+                f.MdiParent = this;
+                f.ShowDialog();
+            }
+            else
+            {
+                form.Activate(); // nếu form đăng nhập đã show trc đó, focus lại.
+            }
 
         }
     }
