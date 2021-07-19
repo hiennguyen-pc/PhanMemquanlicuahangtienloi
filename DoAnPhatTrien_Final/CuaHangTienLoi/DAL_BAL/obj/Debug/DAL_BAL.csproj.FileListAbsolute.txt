@@ -2,3 +2,4 @@ D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\DAL_BAL\bin\De
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\DAL_BAL\bin\Debug\DAL_BAL.pdb
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\DAL_BAL\obj\Debug\DAL_BAL.dll
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\DAL_BAL\obj\Debug\DAL_BAL.pdb
+D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\DAL_BAL\bin\Debug\DAL_BAL.dll.config
