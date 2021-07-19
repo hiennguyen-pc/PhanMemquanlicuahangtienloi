@@ -96,5 +96,25 @@ namespace DAL_BAL
             return false;
         }
 
+        public string timkhach(string dienthoai)
+        {
+            string giamgia=string.Empty;
+            foreach (KHACH kh in db.KHACHes.ToList())
+            {
+                if (kh.DIENTHOAI.Trim() == dienthoai.Trim())
+                {
+                    giamgia= kh.DIEMTHANHVIEN.ToString();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Khách hàng không tồn tại");
+                    break;
+                }
+            }
+            return giamgia;
+            
+        }
+
     }
 }

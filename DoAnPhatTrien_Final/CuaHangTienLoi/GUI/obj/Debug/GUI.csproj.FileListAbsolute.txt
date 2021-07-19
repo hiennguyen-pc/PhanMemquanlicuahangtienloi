@@ -34,3 +34,5 @@ D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.XtraForm1.resources
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\DAL_BAL.dll
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\DAL_BAL.pdb
+D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.frmBanHang.resources
+D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\GUI.exe.config

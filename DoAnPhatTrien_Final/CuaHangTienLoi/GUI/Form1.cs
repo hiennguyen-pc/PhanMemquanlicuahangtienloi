@@ -46,5 +46,20 @@ namespace GUI
             }
 
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = isActive(typeof(frmBanHang)); //check form đăng nhập có show hay không.
+            if (form == null) // nếu formdangnhap ko show
+            {
+                frmBanHang f = new frmBanHang(); //tạo mới form đăng nhập và show nó.
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                form.Activate(); // nếu form đăng nhập đã show trc đó, focus lại.
+            }
+        }
     }
 }
