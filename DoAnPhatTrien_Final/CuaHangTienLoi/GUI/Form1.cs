@@ -33,12 +33,12 @@ namespace GUI
        
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form form = isActive(typeof(frmHangHoa)); //check form đăng nhập có show hay không.
+            Form form = isActive(typeof(XtraForm1)); //check form đăng nhập có show hay không.
             if (form == null) // nếu formdangnhap ko show
             {
-                frmHangHoa f = new frmHangHoa(); //tạo mới form đăng nhập và show nó.
+                XtraForm1 f = new XtraForm1(); //tạo mới form đăng nhập và show nó.
                 f.MdiParent = this;
-                f.ShowDialog();
+                f.Show();
             }
             else
             {
