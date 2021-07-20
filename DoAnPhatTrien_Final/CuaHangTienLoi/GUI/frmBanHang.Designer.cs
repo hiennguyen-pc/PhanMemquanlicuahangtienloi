@@ -31,17 +31,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_hoadon = new System.Windows.Forms.Button();
+            this.btn_thanhtoan = new System.Windows.Forms.Button();
+            this.btn_kiemtra = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMaSP = new System.Windows.Forms.TextBox();
-            this.btn_quetma = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.checkbox_barcode = new System.Windows.Forms.CheckBox();
-            this.dgv_sanpham = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtThanhVien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,16 +45,22 @@
             this.txtTamTinh = new System.Windows.Forms.TextBox();
             this.cbGiamGia = new System.Windows.Forms.CheckBox();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
-            this.btn_kiemtra = new System.Windows.Forms.Button();
-            this.btn_thanhtoan = new System.Windows.Forms.Button();
-            this.btn_hoadon = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.checkbox_barcode = new System.Windows.Forms.CheckBox();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btn_quetma = new System.Windows.Forms.Button();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgv_sanpham = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sanpham)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -105,6 +105,55 @@
             this.panel2.Size = new System.Drawing.Size(582, 130);
             this.panel2.TabIndex = 0;
             // 
+            // btn_hoadon
+            // 
+            this.btn_hoadon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_hoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_hoadon.Location = new System.Drawing.Point(440, 25);
+            this.btn_hoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_hoadon.Name = "btn_hoadon";
+            this.btn_hoadon.Size = new System.Drawing.Size(127, 71);
+            this.btn_hoadon.TabIndex = 39;
+            this.btn_hoadon.Text = "Hóa Đơn";
+            this.btn_hoadon.UseVisualStyleBackColor = false;
+            // 
+            // btn_thanhtoan
+            // 
+            this.btn_thanhtoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_thanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thanhtoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_thanhtoan.Location = new System.Drawing.Point(239, 25);
+            this.btn_thanhtoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_thanhtoan.Name = "btn_thanhtoan";
+            this.btn_thanhtoan.Size = new System.Drawing.Size(127, 71);
+            this.btn_thanhtoan.TabIndex = 38;
+            this.btn_thanhtoan.Text = "Thanh Toán";
+            this.btn_thanhtoan.UseVisualStyleBackColor = false;
+            this.btn_thanhtoan.Click += new System.EventHandler(this.btn_thanhtoan_Click);
+            // 
+            // btn_kiemtra
+            // 
+            this.btn_kiemtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_kiemtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_kiemtra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kiemtra.Location = new System.Drawing.Point(29, 25);
+            this.btn_kiemtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_kiemtra.Name = "btn_kiemtra";
+            this.btn_kiemtra.Size = new System.Drawing.Size(127, 71);
+            this.btn_kiemtra.TabIndex = 37;
+            this.btn_kiemtra.Text = "Kiểm Tra Thành Viên";
+            this.btn_kiemtra.UseVisualStyleBackColor = false;
+            this.btn_kiemtra.Click += new System.EventHandler(this.btn_kiemtra_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(582, 535);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -121,114 +170,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(882, 677);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(582, 535);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.checkbox_barcode);
-            this.panel3.Controls.Add(this.btnThem);
-            this.panel3.Controls.Add(this.btn_quetma);
-            this.panel3.Controls.Add(this.txtMaSP);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.txtTenSP);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(876, 129);
-            this.panel3.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(18, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tên sản phẩm :";
-            // 
-            // txtTenSP
-            // 
-            this.txtTenSP.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtTenSP.Location = new System.Drawing.Point(159, 24);
-            this.txtTenSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenSP.Multiline = true;
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(277, 29);
-            this.txtTenSP.TabIndex = 9;
-            this.txtTenSP.TextChanged += new System.EventHandler(this.txtTenSP_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(18, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 22);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Mã sản  phẩm :";
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtMaSP.Location = new System.Drawing.Point(157, 67);
-            this.txtMaSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaSP.Multiline = true;
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(279, 27);
-            this.txtMaSP.TabIndex = 11;
-            this.txtMaSP.TextChanged += new System.EventHandler(this.txtMaSP_TextChanged);
-            // 
-            // btn_quetma
-            // 
-            this.btn_quetma.Location = new System.Drawing.Point(597, 25);
-            this.btn_quetma.Name = "btn_quetma";
-            this.btn_quetma.Size = new System.Drawing.Size(125, 69);
-            this.btn_quetma.TabIndex = 38;
-            this.btn_quetma.Text = "Quét Mã";
-            this.btn_quetma.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnThem.Location = new System.Drawing.Point(442, 25);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(141, 71);
-            this.btnThem.TabIndex = 39;
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // checkbox_barcode
-            // 
-            this.checkbox_barcode.AutoSize = true;
-            this.checkbox_barcode.Location = new System.Drawing.Point(642, 100);
-            this.checkbox_barcode.Name = "checkbox_barcode";
-            this.checkbox_barcode.Size = new System.Drawing.Size(80, 21);
-            this.checkbox_barcode.TabIndex = 40;
-            this.checkbox_barcode.Text = "Barcode";
-            this.checkbox_barcode.UseVisualStyleBackColor = true;
-            // 
-            // dgv_sanpham
-            // 
-            this.dgv_sanpham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_sanpham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_sanpham.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_sanpham.Location = new System.Drawing.Point(3, 138);
-            this.dgv_sanpham.Name = "dgv_sanpham";
-            this.dgv_sanpham.RowTemplate.Height = 24;
-            this.dgv_sanpham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_sanpham.Size = new System.Drawing.Size(876, 400);
-            this.dgv_sanpham.TabIndex = 2;
             // 
             // panel1
             // 
@@ -308,6 +249,7 @@
             this.txtTamTinh.Size = new System.Drawing.Size(175, 29);
             this.txtTamTinh.TabIndex = 29;
             this.txtTamTinh.Text = "0";
+            this.txtTamTinh.TextChanged += new System.EventHandler(this.txtTamTinh_TextChanged);
             // 
             // cbGiamGia
             // 
@@ -320,6 +262,7 @@
             this.cbGiamGia.TabIndex = 27;
             this.cbGiamGia.Text = "Giảm giá :";
             this.cbGiamGia.UseVisualStyleBackColor = true;
+            this.cbGiamGia.CheckedChanged += new System.EventHandler(this.cbGiamGia_CheckedChanged_1);
             // 
             // txtGiamGia
             // 
@@ -332,45 +275,106 @@
             this.txtGiamGia.TabIndex = 26;
             this.txtGiamGia.Text = "0";
             // 
-            // btn_kiemtra
+            // panel3
             // 
-            this.btn_kiemtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_kiemtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_kiemtra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_kiemtra.Location = new System.Drawing.Point(29, 25);
-            this.btn_kiemtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_kiemtra.Name = "btn_kiemtra";
-            this.btn_kiemtra.Size = new System.Drawing.Size(127, 71);
-            this.btn_kiemtra.TabIndex = 37;
-            this.btn_kiemtra.Text = "Kiểm Tra Thành Viên";
-            this.btn_kiemtra.UseVisualStyleBackColor = false;
+            this.panel3.Controls.Add(this.checkbox_barcode);
+            this.panel3.Controls.Add(this.btnThem);
+            this.panel3.Controls.Add(this.btn_quetma);
+            this.panel3.Controls.Add(this.txtMaSP);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtTenSP);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(876, 129);
+            this.panel3.TabIndex = 1;
             // 
-            // btn_thanhtoan
+            // checkbox_barcode
             // 
-            this.btn_thanhtoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_thanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thanhtoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thanhtoan.Location = new System.Drawing.Point(239, 25);
-            this.btn_thanhtoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_thanhtoan.Name = "btn_thanhtoan";
-            this.btn_thanhtoan.Size = new System.Drawing.Size(127, 71);
-            this.btn_thanhtoan.TabIndex = 38;
-            this.btn_thanhtoan.Text = "Thanh Toán";
-            this.btn_thanhtoan.UseVisualStyleBackColor = false;
-            this.btn_thanhtoan.Click += new System.EventHandler(this.btn_thanhtoan_Click);
+            this.checkbox_barcode.AutoSize = true;
+            this.checkbox_barcode.Location = new System.Drawing.Point(642, 100);
+            this.checkbox_barcode.Name = "checkbox_barcode";
+            this.checkbox_barcode.Size = new System.Drawing.Size(80, 21);
+            this.checkbox_barcode.TabIndex = 40;
+            this.checkbox_barcode.Text = "Barcode";
+            this.checkbox_barcode.UseVisualStyleBackColor = true;
             // 
-            // btn_hoadon
+            // btnThem
             // 
-            this.btn_hoadon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_hoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_hoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_hoadon.Location = new System.Drawing.Point(440, 25);
-            this.btn_hoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_hoadon.Name = "btn_hoadon";
-            this.btn_hoadon.Size = new System.Drawing.Size(127, 71);
-            this.btn_hoadon.TabIndex = 39;
-            this.btn_hoadon.Text = "Hóa Đơn";
-            this.btn_hoadon.UseVisualStyleBackColor = false;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThem.Location = new System.Drawing.Point(442, 25);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(141, 71);
+            this.btnThem.TabIndex = 39;
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btn_quetma
+            // 
+            this.btn_quetma.Location = new System.Drawing.Point(597, 25);
+            this.btn_quetma.Name = "btn_quetma";
+            this.btn_quetma.Size = new System.Drawing.Size(125, 69);
+            this.btn_quetma.TabIndex = 38;
+            this.btn_quetma.Text = "Quét Mã";
+            this.btn_quetma.UseVisualStyleBackColor = true;
+            this.btn_quetma.Click += new System.EventHandler(this.btn_quetma_Click);
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtMaSP.Location = new System.Drawing.Point(157, 67);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaSP.Multiline = true;
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(279, 27);
+            this.txtMaSP.TabIndex = 11;
+            this.txtMaSP.TextChanged += new System.EventHandler(this.txtMaSP_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(18, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 22);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Mã sản  phẩm :";
+            // 
+            // txtTenSP
+            // 
+            this.txtTenSP.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtTenSP.Location = new System.Drawing.Point(159, 24);
+            this.txtTenSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenSP.Multiline = true;
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(277, 29);
+            this.txtTenSP.TabIndex = 9;
+            this.txtTenSP.TextChanged += new System.EventHandler(this.txtTenSP_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(18, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tên sản phẩm :";
+            // 
+            // dgv_sanpham
+            // 
+            this.dgv_sanpham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_sanpham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_sanpham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_sanpham.Location = new System.Drawing.Point(3, 138);
+            this.dgv_sanpham.Name = "dgv_sanpham";
+            this.dgv_sanpham.RowTemplate.Height = 24;
+            this.dgv_sanpham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_sanpham.Size = new System.Drawing.Size(876, 400);
+            this.dgv_sanpham.TabIndex = 2;
             // 
             // frmBanHang
             // 
@@ -387,11 +391,11 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sanpham)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

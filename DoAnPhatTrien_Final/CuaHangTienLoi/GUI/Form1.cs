@@ -33,10 +33,10 @@ namespace GUI
        
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form form = isActive(typeof(frmHangHoa)); //check form đăng nhập có show hay không.
+            Form form = isActive(typeof(frmThongTinHang)); //check form đăng nhập có show hay không.
             if (form == null) // nếu formdangnhap ko show
             {
-                frmHangHoa f = new frmHangHoa(); //tạo mới form đăng nhập và show nó.
+                frmThongTinHang f = new frmThongTinHang(); //tạo mới form đăng nhập và show nó.
                 f.MdiParent = this;
                 f.Show();
             }
@@ -53,6 +53,66 @@ namespace GUI
             if (form == null) // nếu formdangnhap ko show
             {
                 frmBanHang f = new frmBanHang(); //tạo mới form đăng nhập và show nó.
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                form.Activate(); // nếu form đăng nhập đã show trc đó, focus lại.
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = isActive(typeof(frmKhachHang)); //check form đăng nhập có show hay không.
+            if (form == null) // nếu formdangnhap ko show
+            {
+                frmKhachHang f = new frmKhachHang(); //tạo mới form đăng nhập và show nó.
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                form.Activate(); // nếu form đăng nhập đã show trc đó, focus lại.
+            }
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = isActive(typeof(frmNhanvien)); //check form đăng nhập có show hay không.
+            if (form == null) // nếu formdangnhap ko show
+            {
+                frmNhanvien f = new frmNhanvien(); //tạo mới form đăng nhập và show nó.
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                form.Activate(); // nếu form đăng nhập đã show trc đó, focus lại.
+            }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = isActive(typeof(frmNhapHang)); //check form đăng nhập có show hay không.
+            if (form == null) // nếu formdangnhap ko show
+            {
+                frmNhapHang f = new frmNhapHang(); //tạo mới form đăng nhập và show nó.
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                form.Activate(); // nếu form đăng nhập đã show trc đó, focus lại.
+            }
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = isActive(typeof(frmNhacc)); //check form đăng nhập có show hay không.
+            if (form == null) // nếu formdangnhap ko show
+            {
+                frmNhacc f = new frmNhacc(); //tạo mới form đăng nhập và show nó.
                 f.MdiParent = this;
                 f.Show();
             }

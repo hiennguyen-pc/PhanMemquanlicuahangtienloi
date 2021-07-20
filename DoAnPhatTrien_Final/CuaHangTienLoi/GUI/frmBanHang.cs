@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraBars;
 using DevExpress.XtraReports.UI;
 using DAL_BAL;
+using System.Text.RegularExpressions;
 
 namespace GUI
 {
@@ -20,6 +21,7 @@ namespace GUI
         {
             InitializeComponent();
         }
+        API_NhanDien nhandienTV = new API_NhanDien();
         HangHoa_DAL_BAL hang = new HangHoa_DAL_BAL();
         Khach_DAL_BAL khach = new Khach_DAL_BAL();
         string sdtnv="0123456789";
@@ -101,6 +103,7 @@ namespace GUI
                 txtTenSP.Enabled = false;
             dgv_sanpham.DataSource = hang.loadSPtheoMa(txtMaSP.Text);
             dgv_sanpham.Columns[7].Visible = false;
+            ThemSPvaoHD();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -337,14 +340,7 @@ namespace GUI
         }
         private void cbGiamGia_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbGiamGia.Checked == true)
-            {
-                txtThanhTien.Text = (double.Parse(txtTamTinh.Text) - double.Parse(txtGiamGia.Text)).ToString();
-            }
-            else
-            {
-                txtThanhTien.Text = (double.Parse(txtTamTinh.Text)).ToString();
-            }
+            
         }
 
         private void txtThanhTien_TextChanged(object sender, EventArgs e)
@@ -357,7 +353,236 @@ namespace GUI
 
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
-            
+             //DialogResult qd = MessageBox.Show("Xác nhận thanh toán!", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+             //if (qd == DialogResult.Yes)
+             //{
+             //    using (QL_CHTLDataContext db = new QL_CHTLDataContext())
+             //    {
+             //        //Them hoa don
+             //        HOADON hd = new HOADON();
+             //        if (txtThanhVien.Text == "")
+             //        {
+             //            hd.MAKH = "0000000000";
+             //            hd.MANV = sdtnv;
+             //            hd.TAMTINH = 0;
+             //            hd.GIAMGIA = 0;
+             //            hd.NGAYBAN = DateTime.Today;
+             //        }
+             //        else
+             //        {
+             //            hd.MAKH = txtThanhVien.Text.Trim();
+             //            hd.MANV = sdtnv;
+             //            //hd.TAMTINH = 0;
+             //            if (cbGiamGia.Checked == true)
+             //            {
+             //                if (double.Parse(txtTamTinh.Text) < double.Parse(txtGiamGia.Text))
+             //                {
+             //                    hd.GIAMGIA = double.Parse(txtTamTinh.Text);
+             //                }
+             //                else
+             //                {
+             //                    hd.GIAMGIA = double.Parse(txtGiamGia.Text);
+             //                }
+             //                KHACH khachgiamgia = db.KHACHes.Where(t => t.DIENTHOAI.Trim() == txtThanhVien.Text.Trim()).FirstOrDefault();
+             //                khachgiamgia.DIEMTHANHVIEN = khachgiamgia.DIEMTHANHVIEN - (double.Parse(txtTamTinh.Text) - double.Parse(txtThanhTien.Text));
+             //                db.SubmitChanges();
+             //            }
+             //            hd.NGAYBAN = DateTime.Today;
+             //            if (cbGiamGia.Checked == false)
+             //                db.KHACHes.Where(t => t.DIENTHOAI.Trim() == txtThanhVien.Text.Trim()).FirstOrDefault().DIEMTHANHVIEN += double.Parse(txtThanhTien.Text) * 0.1;
+             //        }
+             //        db.HOADONs.InsertOnSubmit(hd);
+             //        db.SubmitChanges();
+
+             //        foreach (Control lo in flowLayoutPanel1.Controls)
+             //        {
+             //            if (lo.Tag.ToString() == "1")
+             //                continue;
+             //            else
+             //            {
+             //                CHITIETHD cthd = new CHITIETHD();
+             //                cthd.MAHD = hd.MAHD;
+             //                cthd.MAHG = int.Parse(lo.Tag.ToString());
+             //                foreach (Control pn in lo.Controls)
+             //                {
+             //                    if (pn.Tag.ToString() == (cthd.MAHG.ToString() + "PNSL"))
+             //                    {
+             //                        foreach (Control tb in pn.Controls)
+             //                        {
+             //                            cthd.SOLUONG = int.Parse(tb.Text);
+             //                        }
+             //                    }
+             //                    if (pn.Tag.ToString() == (cthd.MAHG.ToString() + "PNDG"))
+             //                    {
+             //                        foreach (Control tb in pn.Controls)
+             //                        {
+             //                            cthd.DONGIA = int.Parse(tb.Text);
+             //                        }
+             //                    }
+             //                }
+             //                db.CHITIETHDs.InsertOnSubmit(cthd);
+             //                db.SubmitChanges();
+             //            }
+             //        }
+             //        var hoadon = (from mahd in db.CHITIETHDs orderby mahd.MAHD descending select mahd.MAHD).FirstOrDefault();
+             //        MaHoaDon = hoadon;
+             //        MessageBox.Show("Thanh toán thành công!");
+             //        rptHoaDon rpt = new rptHoaDon();
+             //        rpt.FilterString = "[MAHD] = '" + MaHoaDon.ToString() + "'";
+             //        rpt.ShowPreviewDialog();
+             //        rpt.CreateDocument();
+             //        rpt.ShowPreviewDialog();
+             //        flowLayoutPanel1.Controls.Clear();
+             //        txtGiamGia.Text = "0";
+             //        txtTamTinh.Text = "0";
+             //        txtTenSP.Text = "Re";
+             //        txtTenSP.Clear();
+             //        txtMaSP.Clear();
+             //        cbGiamGia.Checked = false;
+             //    }
+             //}
+        }
+
+        private void cbGiamGia_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (cbGiamGia.Checked == true)
+            {
+                txtThanhTien.Text = (double.Parse(txtTamTinh.Text) - double.Parse(txtGiamGia.Text)).ToString();
+            }
+            else
+            {
+                txtThanhTien.Text = (double.Parse(txtTamTinh.Text)).ToString();
+            }
+        }
+
+        private void txtTamTinh_TextChanged(object sender, EventArgs e)
+        {
+            if (cbGiamGia.Checked == true)
+            {
+                txtThanhTien.Text = (double.Parse(txtTamTinh.Text) - double.Parse(txtGiamGia.Text)).ToString();
+            }
+            else
+            {
+                txtThanhTien.Text = (double.Parse(txtTamTinh.Text)).ToString();
+            }
+        }
+
+        private void btn_kiemtra_Click(object sender, EventArgs e)
+        {
+            String output = nhandienTV.getOutput();
+            string[] words = output.Split(':');
+            string[] words1 = words[1].Split(',');
+            string strResult = Regex.Replace(words1[0], @"[^a-zA-Z0-9]", string.Empty);
+            using (QL_CHTLDataContext db = new QL_CHTLDataContext())
+            {
+                foreach (KHACH kh in db.KHACHes.ToList())
+                {
+                    if (kh.DIENTHOAI.Trim() == strResult.Trim())
+                    {
+                        txtThanhVien.Text = strResult;
+                        cbGiamGia.Checked = true;
+                    }
+                }
+            }
+        }
+
+        private void btn_quetma_Click(object sender, EventArgs e)
+        {
+            txtMaSP.Clear();
+            txtMaSP.Focus();
+            checkbox_barcode.Checked = true;
+        }
+        private void ThemSPvaoHD()
+        {
+            if (dgv_sanpham.RowCount == 1 && checkbox_barcode.Checked == true)
+            {
+                using (QL_CHTLDataContext db = new QL_CHTLDataContext())
+                {
+                    foreach (FlowLayoutPanel pn in flowLayoutPanel1.Controls)
+                    {
+                        if (pn.Tag.ToString() == dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString())
+                        {
+                            MessageBox.Show("Đã có sản phẩm này rồi");
+                            return;
+                        }
+                        if (dgv_sanpham.SelectedRows[0].Cells[3].Value.ToString() == "0")
+                        {
+                            MessageBox.Show("Đã hết hàng");
+                            return;
+                        }
+                    }
+                    FlowLayoutPanel flowLayoutPanelnew = new FlowLayoutPanel();
+                    flowLayoutPanelnew.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString();
+                    flowLayoutPanelnew.Size = new System.Drawing.Size(793, 100);
+                    flowLayoutPanel1.Controls.Add(flowLayoutPanelnew);
+
+                    //hinh
+                    PictureBox hinh = new PictureBox();
+                    hinh.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString();
+                    hinh.Size = new System.Drawing.Size(107, 89);
+                    hinh.Location = new System.Drawing.Point(3, 3);
+                    flowLayoutPanelnew.Controls.Add(hinh);
+                    hinh.Image = Image.FromFile(System.IO.Directory.GetCurrentDirectory() + "\\Images\\" + dgv_sanpham.SelectedRows[0].Cells[7].Value.ToString());
+                    hinh.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    //soluong
+                    TextBox sl = new TextBox();
+                    sl.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString();
+                    Panel pnSL = new Panel();
+                    pnSL.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString() + "PNSL";
+                    pnSL.Size = new System.Drawing.Size(59, 89);
+                    pnSL.Controls.Add(sl);
+                    sl.Location = new System.Drawing.Point(14, 33);
+                    sl.Size = new System.Drawing.Size(25, 17);
+                    flowLayoutPanelnew.Controls.Add(pnSL);
+                    sl.Text = "1";
+                    sl.TextChanged += new System.EventHandler(sl_TextChanged);
+                    sl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(sl_KeyPress);
+                    sl.Leave += new System.EventHandler(this.sl_Leave);
+
+                    //dongia
+                    Label lbDonGia = new Label();
+                    lbDonGia.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString() + "DG";
+                    Panel pnDG = new Panel();
+                    pnDG.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString() + "PNDG";
+                    pnDG.Location = new System.Drawing.Point(181, 3);
+                    pnDG.Size = new System.Drawing.Size(147, 89);
+                    pnDG.Controls.Add(lbDonGia);
+                    lbDonGia.Location = new System.Drawing.Point(42, 33);
+                    lbDonGia.Size = new System.Drawing.Size(57, 17);
+                    flowLayoutPanelnew.Controls.Add(pnDG);
+                    lbDonGia.Text = dgv_sanpham.SelectedRows[0].Cells[5].Value.ToString();
+
+                    //thanhtien
+                    Label lbThanhTien = new Label();
+                    lbThanhTien.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString() + "TT";
+                    Panel pnTT = new Panel();
+                    pnTT.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString() + "PNTT";
+                    pnTT.Location = new System.Drawing.Point(334, 3);
+                    pnTT.Size = new System.Drawing.Size(136, 86);
+                    pnTT.Controls.Add(lbThanhTien);
+                    flowLayoutPanelnew.Controls.Add(pnTT);
+                    lbThanhTien.Location = new System.Drawing.Point(31, 33);
+                    lbThanhTien.Size = new System.Drawing.Size(81, 17);
+                    lbThanhTien.Text = dgv_sanpham.SelectedRows[0].Cells[5].Value.ToString();
+                    lbThanhTien.TextChanged += new System.EventHandler(lbThanhTien_TextChanged);
+                    //Xoa
+                    Button btnXoa = new Button();
+                    //btnXoa.Image = global::GUI.Properties.Resources.icons8_delete_50;
+                    btnXoa.Size = new System.Drawing.Size(88, 67);
+                    btnXoa.Text = "Xóa";
+                    btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+                    btnXoa.UseVisualStyleBackColor = true;
+                    flowLayoutPanelnew.Controls.Add(btnXoa);
+                    btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+                    btnXoa.Tag = dgv_sanpham.SelectedRows[0].Cells[0].Value.ToString();
+                    //update tamtinh
+                    tinhTamTinh();
+
+                }
+                txtMaSP.Clear();
+                txtMaSP.Focus();
+            }
         }
     }
 }

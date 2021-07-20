@@ -14,6 +14,29 @@ namespace DAL_BAL
         {
             db = new QL_CHTLDataContext();
         }
+
+        public List<HANG> LoadSP()
+        {
+            List<HANG> result = new List<HANG>();
+            var link = from hg in db.HANGs
+                       join ncc in db.NHACCs on hg.MANCC equals ncc.MANCC
+                       select new { hg.MAHG, hg.TENHG, hg.DVT, hg.SOLUONG, hg.MANCC, hg.DONGIA, hg.TINHTRANG, hg.ANH };
+            foreach (var sp in link)
+            {
+                result.Add(new HANG
+                {
+                    MAHG = sp.MAHG,
+                    TENHG = sp.TENHG,
+                    DVT = sp.DVT,
+                    SOLUONG = sp.SOLUONG,
+                    MANCC = sp.MANCC,
+                    DONGIA = sp.DONGIA,
+                    TINHTRANG = sp.TINHTRANG,
+                    ANH = sp.ANH
+                });
+            }
+            return result;
+        }
         public List<HANG> LoadSPTheoTen(string tenSp)
         {
             List<HANG> result = new List<HANG>();

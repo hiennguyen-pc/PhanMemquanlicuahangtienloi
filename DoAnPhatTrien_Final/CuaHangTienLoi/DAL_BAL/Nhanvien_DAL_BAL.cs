@@ -10,11 +10,11 @@ namespace DAL_BAL
     public class Nhanvien_DAL_BAL
     {
         QL_CHTLDataContext db;
-        private Nhanvien_DAL_BAL()
+        public Nhanvien_DAL_BAL()
         {
             db = new QL_CHTLDataContext();
         }
-        public List<NHANVIEN> loadNhaVien()
+        public List<NHANVIEN> loadNhanVien()
         {
             List<NHANVIEN> result = new List<NHANVIEN>();
             var data = from nv in db.NHANVIENs

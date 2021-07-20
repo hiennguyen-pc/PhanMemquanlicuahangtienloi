@@ -17,7 +17,6 @@ D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.pdb
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\GUI.exe
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\GUI.pdb
-D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.Form1.resources
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.frmAdmin.resources
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.frmDangNhap.resources
@@ -31,8 +30,11 @@ D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.UCNhapHang.resources
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.exe.licenses
-D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.XtraForm1.resources
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\DAL_BAL.dll
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\DAL_BAL.pdb
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.frmBanHang.resources
 D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\bin\Debug\GUI.exe.config
+D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.frmNhanvien.resources
+D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.frmThongTinHang.resources
+D:\PhanMemquanlicuahangtienloi\DoAnPhatTrien_Final\CuaHangTienLoi\GUI\obj\Debug\GUI.frmNhacc.resources
